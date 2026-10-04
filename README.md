@@ -1,6 +1,6 @@
 # 🔐 SecurAI JWT Analyzer
 
-A Python CLI tool that decodes a JWT and checks it for the most common real-world vulnerabilities — `alg=none`, weak HMAC secrets, RS256→HS256 confusion, missing expiration, and sensitive data in the payload.
+A Python CLI tool that decodes a JWT and checks it for the most common real-world vulnerabilities - `alg=none`, weak HMAC secrets, RS256→HS256 confusion, missing expiration, and sensitive data in the payload.
 
 **WARNING: For educational and authorized testing only. Only use against systems you own or have explicit written permission to test.**
 
@@ -69,9 +69,9 @@ RS256→HS256 confusion (supply the public key):
 
 ## Exit codes
 
-- `0` — no critical/high findings
-- `1` — at least one critical or high finding (useful to gate a CI pipeline)
-- `2` — invalid input (bad JWT format, missing file, etc.)
+- `0` - no critical/high findings
+- `1` - at least one critical or high finding (useful to gate a CI pipeline)
+- `2` - invalid input (bad JWT format, missing file, etc.)
 
 ## Tests
 
@@ -90,4 +90,4 @@ All 11 tests should pass.
 
 ## License
 
-MIT — for educational and authorized testing use only.
+MIT - for educational and authorized testing use only.
