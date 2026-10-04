@@ -1,0 +1,15 @@
+# SecurAI JWT Analyzer — sample vulnerable tokens for testing
+# These are throwaway tokens. Never use the secrets in production.
+
+# 1. alg=none — full auth bypass
+eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJzdWIiOiIxMjM0Iiwicm9sZSI6ImFkbWluIiwiZXhwIjo5OTk5OTk5OTk5fQ.
+
+# 2. HS256 with weak secret "password"
+# (brute-force will recover it from the wordlist)
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0IiwiZXhwIjo5OTk5OTk5OTk5fQ.4Xc4rJ3a8F1sLq2mN9pQvW7yZ0bC6dE5fG3hI8jK9lM
+
+# 3. No expiration — token valid forever
+eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0IiwibmFtZSI6IkFsaWNlIn0.abc123
+
+# 4. Sensitive data in payload (password)
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0IiwicGFzc3dvcmQiOiJodW50ZXIyIiwiZXhwIjo5OTk5OTk5OTk5fQ.def456
