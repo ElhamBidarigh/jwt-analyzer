@@ -7,3 +7,7 @@ build/
 venv/
 .env
 *.log
+
+# Generated analysis reports
+report.html
+*.report.html

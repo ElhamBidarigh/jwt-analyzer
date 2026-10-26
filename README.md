@@ -87,6 +87,7 @@ All 11 tests should pass.
 | 🔬 Vuln Lab | Educational (PHP/MySQL) | [Repo](https://github.com/ElhamBidarigh/securAI-vuln-lab) |
 | 🔐 JWT Analyzer | CLI (Python) | You are here |
 | 🔍 Active Scanner | Live URL scanner (PHP) | [Repo](https://github.com/ElhamBidarigh/securAI-active-scanner) |
+| 🔌 MCP Scanner | CLI (Python) | [Repo](https://github.com/ElhamBidarigh/securAI-mcp-scanner) |
 
 ## License
 
