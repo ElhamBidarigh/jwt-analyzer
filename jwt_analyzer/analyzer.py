@@ -2,7 +2,7 @@
 Core JWT analysis logic.
 
 Decodes a JWT without verifying the signature, then runs a series of
-security checks. Never sends the token anywhere — everything is local.
+security checks. Never sends the token anywhere - everything is local.
 """
 import base64
 import json
@@ -106,7 +106,7 @@ def analyze(token: str) -> AnalysisResult:
             title="Algorithm set to 'none' (no signature)",
             description=(
                 "The token declares no signing algorithm. A server that "
-                "honours this accepts arbitrary forged tokens — full "
+                "honours this accepts arbitrary forged tokens - full "
                 "authentication bypass."
             ),
             remediation=(
@@ -127,7 +127,7 @@ def analyze(token: str) -> AnalysisResult:
                 "The token never expires. A leaked token is valid forever "
                 "and cannot be aged out."
             ),
-            remediation="Always set a short 'exp' (e.g. 15–60 minutes).",
+            remediation="Always set a short 'exp' (e.g. 15-60 minutes).",
         ))
     else:
         exp = payload["exp"]
@@ -183,7 +183,7 @@ def analyze(token: str) -> AnalysisResult:
             title="Sensitive data in payload",
             description=(
                 "The payload contains keys that look sensitive. JWT "
-                "payloads are base64-encoded, NOT encrypted — anyone "
+                "payloads are base64-encoded, NOT encrypted - anyone "
                 "with the token can read them."
             ),
             remediation=(
@@ -240,7 +240,7 @@ def analyze(token: str) -> AnalysisResult:
 
 
 def _score(findings: list) -> int:
-    """Compute a 0–100 security score from findings (higher = better)."""
+    """Compute a 0-100 security score from findings (higher = better)."""
     weights = {"critical": 25, "high": 12, "medium": 5, "low": 2, "info": 0}
     penalty = sum(weights.get(f.severity, 0) for f in findings)
     return max(0, 100 - penalty)

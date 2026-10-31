@@ -1,5 +1,7 @@
 # 🔐 SecurAI JWT Analyzer
 
+[![Tests](https://github.com/ElhamBidarigh/jwt-analyzer/actions/workflows/tests.yml/badge.svg)](https://github.com/ElhamBidarigh/jwt-analyzer/actions/workflows/tests.yml)
+
 A Python CLI tool that decodes a JWT and checks it for the most common real-world vulnerabilities - `alg=none`, weak HMAC secrets, RS256→HS256 confusion, missing expiration, and sensitive data in the payload.
 
 **WARNING: For educational and authorized testing only. Only use against systems you own or have explicit written permission to test.**
@@ -88,6 +90,7 @@ All 11 tests should pass.
 | 🔐 JWT Analyzer | CLI (Python) | You are here |
 | 🔍 Active Scanner | Live URL scanner (PHP) | [Repo](https://github.com/ElhamBidarigh/securAI-active-scanner) |
 | 🔌 MCP Scanner | CLI (Python) | [Repo](https://github.com/ElhamBidarigh/securAI-mcp-scanner) |
+| 🧪 Prompt Tester | CLI (Python) | [Repo](https://github.com/ElhamBidarigh/securAI-prompt-tester) |
 
 ## License
 
